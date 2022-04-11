@@ -1,0 +1,22 @@
+{
+    "name": "Anti-Jorge",
+    "description": "Elimina a palavra 'jorge' dos textos.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/ico16.png",
+            "32": "/images/ico32.png",
+            "48": "/images/ico48.png",
+            "128": "/images/ico128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/ico16.png",
+        "32": "/images/ico32.png",
+        "48": "/images/ico48.png",
+        "128": "/images/ico128.png" 
+    }
+}
