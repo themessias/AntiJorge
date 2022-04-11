@@ -9,30 +9,6 @@ changeColor.addEventListener("click", async() => {
     });
 });
 
-// chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
-//     if (changeInfo.status == 'complete') {
-//         var elements = document.getElementsByTagName('*');
-
-//         for (var i = 0; i < elements.length; i++) {
-//             var element = elements[i];
-
-//             for (var j = 0; j < element.childNodes.length; j++) {
-//                 var node = element.childNodes[j];
-
-//                 if (node.nodeType === 3) {
-//                     var text = node.nodeValue;
-//                     var replacedText = text.replace(/jorge/gi, 'Null');
-
-//                     if (replacedText !== text) {
-//                         element.replaceChild(document.createTextNode(replacedText), node);
-//                     }
-//                 }
-//             }
-
-//         }
-//     }
-// });
-
 function setPageBackgroundColor(){
     var elements = document.getElementsByTagName('*');
     var cont = 0;
