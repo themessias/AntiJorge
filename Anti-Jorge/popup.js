@@ -12,23 +12,17 @@ changeColor.addEventListener("click", async() => {
 function setPageBackgroundColor(){
     var elements = document.getElementsByTagName('*');
     var cont = 0;
-    for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
 
-        for (var j = 0; j < element.childNodes.length; j++) {
-            var node = element.childNodes[j];
-
-            if (node.nodeType === 3) {
-                var text = node.nodeValue;
-                var replacedText = text.replace(/jorge/gi, 'Null');
-
-                if (replacedText !== text) {
-                    element.replaceChild(document.createTextNode(replacedText), node);
-                    cont++;
-                } 
-            }
-        }
-    }
+    elements.forEach((element) => {
+	element.childNodes.forEach((child) => {
+	    if (child.nodeType === 3 && child.nodeValue.match(/jorge/gi) != null) {
+		var changedText = child.nodeValue.replace(/jorge/gi, 'Null');
+		element.replaceChild(document.createTextNode(changedText), child);
+		cont++;
+	    }
+	});
+    });
+    
     if (cont == 0){
         alert("N\u00e3o h\u00e1 texto a ser substitu\u00eddo nessa p\u00e1gina.");
     }
