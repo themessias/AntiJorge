@@ -10,7 +10,7 @@ changeColor.addEventListener("click", async() => {
 });
 
 function setPageBackgroundColor(){
-    var elements = document.getElementsByTagName('*');
+    var elements = [...document.getElementsByTagName('*')];
     var cont = 0;
 
     elements.forEach((element) => {
